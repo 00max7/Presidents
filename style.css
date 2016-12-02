@@ -1,0 +1,88 @@
+body { 
+  background-color:rgba(25, 25, 25, 1); 
+  overflow:hidden;    /* scrollbars nope!!! */
+}
+
+.wrapper-block {      /* spread it to body */
+  overflow:hidden;    /* scrollbars nope!!! */
+  position:absolute;
+  display:table;
+  height:100%;
+  width:100%;
+  text-align:center;  
+  
+  /* center it the flex way 
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  display:flex; */
+}
+
+.wrapper-center {
+  vertical-align:middle;
+  display:table-cell;
+  /* margin:auto;      /* center it the flex way */
+}
+
+.position-me { 
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform:uppercase;
+  font-size:4rem;
+  line-height:4rem;
+  position:relative;
+  display:inline-block;
+  color:rgba(60, 60, 60, 0);
+}
+
+.position-me a,
+.position-me a:link,
+.position-me a:visited,
+.position-me a:focus,
+.position-me a:hover,
+.position-me a:active {
+  border:none;
+  text-decoration:none;
+  outline:0;
+  color:rgba(60, 60, 60, 1);
+}
+
+.position-me.s-lovely a,
+.position-me.s-lovely a:link,
+.position-me.s-lovely a:visited,
+.position-me.s-lovely a:focus,
+.position-me.s-lovely a:hover,
+.position-me.s-lovely a:active {
+  color:rgba(255, 0, 55, 1);
+}
+
+/* needed if some scaling is done */
+.animate-me {
+  position:absolute;
+  left:0;
+  top:0;
+  color:rgba(160, 160, 160, 1);
+}
+
+.animate-me.s-animating,
+.animate-me:hover {
+  animation-duration:0.3s;
+  animation-iteration-count:2;
+  animation-direction:alternate;
+  animation-name:animateMe;
+}
+
+@keyframes animateMe {
+  from {}
+ 
+  to {
+    font-size:70rem;
+    opacity:0.3;
+  }
+}
+
+/* states */
+.s-animating {}
+.s-hidden { display:none; }
+.s-lovely { color:rgba(255, 0, 55, 0); }
